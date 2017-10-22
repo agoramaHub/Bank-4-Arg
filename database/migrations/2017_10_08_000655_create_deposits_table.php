@@ -15,8 +15,10 @@ class CreateDepositsTable extends Migration
     {
         Schema::create('deposits', function (Blueprint $table) {
           $table->increments('id');
+          $table->string('subject');
+          $table->text('key_points');
           $table->text('argument');
-          $table->decimal('value', 5, 2)->nullable();
+          $table->integer('value')->nullable();
           $table->integer('user_id');
           $table->timestamps();
         });

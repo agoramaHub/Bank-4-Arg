@@ -64,8 +64,8 @@ Route::get('protected', ['middleware' => ['auth', 'admin'], function() {
     return "this page requires that you be logged in and an Admin";
 }]);
 
-Route::get('/account/pending/', 'AccountsController@pending');
+Route::get('/account/pending/', 'DepositsController@pending');
 
-Route::get('/account/pending/{id}', 'AccountsController@show');
+Route::get('/account/pending/{id}', 'DepositsController@show');
 
 Route::delete('/account/pending/{id}', 'DepositsController@value');

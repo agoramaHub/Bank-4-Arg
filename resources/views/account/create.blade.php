@@ -13,6 +13,16 @@
         <div class="container">
 
             <div class="form-group">
+              <label for="subject">Argument Subject</label>
+              <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+            </div>
+
+              <div class="form-group">
+                <label for="content">Key Points</label>
+                <textarea name="key_points" placeholder="Create Post Here." class="form-control" required></textarea>
+              </div>
+
+            <div class="form-group">
               <label for="argument">Argument</label>
               <textarea name="argument" placeholder="Create Argument Here." class="form-control" required></textarea>
             </div>

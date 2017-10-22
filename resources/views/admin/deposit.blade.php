@@ -15,6 +15,12 @@
     </thead>
     <tbody>
       <tr>
+        <td>{{ $deposit->subject }}</td>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+      <tr>
         <td>{{ $deposit->argument }}</td>
       </tr>
       <tr>
@@ -28,7 +34,7 @@
         </form></td>
       </tr>
       <tr>
-        <td>Current Value: ø0.00</td>
+        <td>Current Value: Φ0.00</td>
       </tr>
     </tbody>
   </table>

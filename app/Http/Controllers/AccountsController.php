@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 
 use App\Accounts;
 
-use App\Deposits;
-
 use App\User;
 
 class AccountsController extends Controller
@@ -56,29 +54,6 @@ class AccountsController extends Controller
 
         return view('account.create');
     }
-
-
-
-/***
-* Administrational tools
-***/
-
-//view pending deposits index
-    public function pending() {
-
-        $pendings = Deposits::where('value', '=', NULL)->get();
-
-        return view('admin.pending', compact('pendings'));
-    }
-
-//Show target deposit view
-    public function show($id) {
-
-        $deposit = Deposits::find($id);
-
-        return view('account.deposit', compact('deposit'));
-    }
-
 
 
 }

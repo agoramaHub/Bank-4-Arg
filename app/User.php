@@ -57,4 +57,9 @@ class User extends Authenticatable
         return $this->hasMany(Deposits::class);
     }
 
+    public function wallet() {
+
+        return $this->belongsTo(Wallet::class);
+    }
+
 }

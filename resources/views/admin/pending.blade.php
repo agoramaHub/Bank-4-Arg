@@ -16,13 +16,19 @@
     </thead>
     <tbody>
       <tr>
-        <td>{{ $pending->argument }}</td>
+        <td>{{ $pending->subject }}</td>
       </tr>
       <tr>
         <td></td>
       </tr>
       <tr>
-        <td>Current Value: ø0.00 | <a href="/account/pending/{{ $pending->id }}" class"">Appriase</a></td>
+        <td>{{ $pending->key_points }}</td>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Current Value: Φ0.00 | <a href="/account/pending/{{ $pending->id }}" class"">Appriase</a></td>
       </tr>
     </tbody>
   </table>

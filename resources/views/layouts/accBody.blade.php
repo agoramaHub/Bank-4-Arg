@@ -34,13 +34,19 @@
     </thead>
     <tbody>
       <tr>
-        <td>{{ $account->argument }}</td>
+        <td><a href="#">{{ $account->subject }}</a></td>
       </tr>
       <tr>
         <td></td>
       </tr>
       <tr>
-        <td>Value: ø{{ $account->value }}</td>
+        <td>{{ $account->key_points }}</td>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Value: Φ{{ $account->value }}</td>
       </tr>
     </tbody>
   </table>
