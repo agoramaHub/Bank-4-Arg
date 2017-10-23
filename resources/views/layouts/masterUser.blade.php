@@ -30,6 +30,7 @@
           @yield ('create')
           @yield ('index')
           @yield ('thread')
+          @yield ('singleArg')
 
 
         <!--/main-->

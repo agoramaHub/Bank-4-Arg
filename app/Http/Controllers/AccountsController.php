@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Accounts;
 
+use App\Wallet;
+
 use App\User;
 
 class AccountsController extends Controller
@@ -21,11 +23,16 @@ class AccountsController extends Controller
 //Display user's account information
     public function index() {
 
-        $accounts = Accounts::where('user_id','=', ['id' => auth()->id()])->get();
+        $accounts = Accounts::latest()->where('user_id','=', ['id' => auth()->id()])->get();
 
+        $wallet  = Wallet::where('user_id','=', ['id' => auth()->id()])->get();
+
+// Admin area display //
         $allAccounts = Accounts::all();
 
-        $userAcc = \DB::table('users')->leftJoin('accounts','users.id','=','accounts.user_id')->get();
+        $usernames = User::all();
+
+        $usersAcc = Wallet::all()->groupBy('user_id');
 
 /*
 
@@ -45,7 +52,15 @@ class AccountsController extends Controller
 
 */
 
-        return view('account.account', compact('accounts','allAccounts','userAcc'));
+        return view('account.account', compact('accounts','wallet', 'allAccounts','usernames','usersAcc'));
+    }
+
+// show single argument from users dashboard //
+    public function show($id) {
+
+        $arg = Accounts::find($id);
+
+        return view('account.show', compact('arg'));
     }
 
 

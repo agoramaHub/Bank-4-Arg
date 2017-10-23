@@ -40,6 +40,8 @@ Route::post('/logout', 'SessionsController@destroy');
 */
 Route::get('/account', 'AccountsController@index')->name('home');
 
+Route::get('/account/arg/{id}', 'AccountsController@show');
+
 Route::get('/account/deposit', 'AccountsController@create');
 
 Route::post('/account/deposit', 'DepositsController@store');

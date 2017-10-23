@@ -15,6 +15,6 @@ class DatabaseSeeder extends Seeder
         // $this->call(ForumthreadSeeder::class);
         // $this->call(CommentsSeeder::class);
         // $this->call(AccountsSeeder::class);
-        $this->call(DepositsSeeder::class);
+        // $this->call(DepositsSeeder::class);
     }
 }

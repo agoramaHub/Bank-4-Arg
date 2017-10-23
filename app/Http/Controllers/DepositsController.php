@@ -31,7 +31,7 @@ class DepositsController extends Controller
 
             return back();
 
-      }
+          }
 
       /***
       * Administrational tools
@@ -71,11 +71,9 @@ class DepositsController extends Controller
                             'user_id' => $deposit->user_id
             ]);
 
-
             $deposit->delete();
 
             return redirect('/account/pending');
-
-      }
+          }
 
 }
