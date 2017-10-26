@@ -32,25 +32,12 @@ class AccountsController extends Controller
 
         $usernames = User::all();
 
-        $usersAcc = Wallet::all()->groupBy('user_id');
-
-/*
-
-// $total user holdings (working)
-
-        DB::table('users')->leftJoin('accounts','accounts.user_id','=','users.id')
-          ->where('users.id','=',3)
-          ->select('accounts.value')
-          ->get()
-          ->count();
-
-// $total WORDCOIN sum (working)
-          $values = DB::table('users')->leftJoin('accounts','accounts.user_id','=','users.id')
-          ->where('users.id','=',3)
-          ->select('accounts.value')
-          ->get();
-
-*/
+        $usersAcc = \DB::table('wallets')
+                         ->leftJoin('users','users.id','=','user_id')
+                         ->select(\DB::raw('count(user_id) as cnt, sum(tot_wc) as tot_wc, any_value(username) as username'))
+                         ->where('user_id','<>',1)
+                         ->groupBy('user_id')
+                         ->get();
 
         return view('account.account', compact('accounts','wallet', 'allAccounts','usernames','usersAcc'));
     }

@@ -1,23 +1,22 @@
 
-
 @if (Auth::user()->admin)
 @foreach ($usersAcc as $userAcc)
 <div class="table-responsive">
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Username: </th>
+        <th>Username: {{ $userAcc->username }}</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Total Argument Holdings: {{ $userAcc->count() }}</td>
+        <td>Total Argument Holdings: {{ $userAcc->cnt }}</d>
       </tr>
       <tr>
         <td></td>
       </tr>
       <tr>
-        <td>Total WORDCOIN: Φ{{ $userAcc->sum('tot_wc') * 1.618 }}</td>
+        <td>Total WORDCOIN: Φ{{ $userAcc->tot_wc * 1.618 }}</td>
       </tr>
     </tbody>
   </table>
