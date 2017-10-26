@@ -9,7 +9,7 @@
 @include ('layouts.header')
 
 <div class="container">
-<h2>WORDCOIN Holdings</h2>
+
 
 @include ('layouts.accBody')
 

@@ -1,5 +1,6 @@
 
 @if (Auth::user()->admin)
+<h2>WORDCOIN Overview</h2>
 @foreach ($usersAcc as $userAcc)
 <div class="table-responsive">
   <table class="table table-striped">
@@ -23,6 +24,7 @@
 </div>
 @endforeach
 @else
+<h2>WORDCOIN Holdings</h2>
 @foreach ($accounts as $account)
 <div class="table-responsive">
   <table class="table table-striped">
