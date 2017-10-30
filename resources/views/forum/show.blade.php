@@ -15,7 +15,7 @@
       <!--content rows-->
     <tbody>
       <tr>
-        <td>{{ $forum->content }}</td>
+        <td>{!! $forum->content !!}</td>
       </tr>
       <tr>
         <th></th>
@@ -44,7 +44,7 @@
       <!--content rows-->
     <tbody>
       <tr>
-        <td>{{ $comment->body }}</td>
+        <td>{!! $comment->body !!}</td>
       </tr>
       <tr>
         <th></th>
@@ -63,7 +63,7 @@
 <div class="container forum-main input">
   <div class="card">
     <div class="card-bloack">
-      <form method="POST" action="/forum/{{ $forum->id }}/comments">
+      <form method="POST" action="/notices/{{ $forum->id }}/comments" name="comments" novalidate>
         {{ csrf_field() }}
         <div class="container">
             <div class="form-group">
@@ -78,4 +78,5 @@
     </div>
   </div>
 </div>
+<script>tinymce.init({ selector:'textarea' });</script>
 @endsection

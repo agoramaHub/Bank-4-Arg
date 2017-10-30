@@ -8,7 +8,7 @@
     <div class="card-bloack">
 
 
-      <form method="POST" action="/forum">
+      <form method="POST" action="/notices" name="broadcast" novalidate>
         {{ csrf_field() }}
         <div class="container">
 
@@ -32,4 +32,5 @@
     </div>
   </div>
 </div>
+<script>tinymce.init({ selector:'textarea' });</script>
 @endsection

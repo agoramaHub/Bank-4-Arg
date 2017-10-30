@@ -49,15 +49,15 @@ Route::post('/account/deposit', 'DepositsController@store');
 /*
 * Forum Area
 */
-Route::get('/forum', 'ForumController@index');
+Route::get('/notices', 'ForumController@index');
 
-Route::get('/forum/create', 'ForumController@create');
+Route::get('/notices/create', 'ForumController@create');
 
-Route::post('/forum', 'ForumController@store');
+Route::post('/notices', 'ForumController@store');
 
-Route::get('/forum/{forum}', 'ForumController@show');
+Route::get('/notices/{notice}', 'ForumController@show');
 
-Route::post('/forum/{forum}/comments', 'CommentsController@store');
+Route::post('/notices/{forum}/comments', 'CommentsController@store');
 
 /*
 * Admin routes

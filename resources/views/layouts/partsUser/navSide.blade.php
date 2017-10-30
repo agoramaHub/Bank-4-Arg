@@ -12,7 +12,7 @@
       <a class="nav-link" href="/account/deposit">Deposit Argument</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/forum">Argument Landscape</a>
+      <a class="nav-link" href="/notices">Notices</a>
     </li>
   </ul>
 
@@ -25,7 +25,7 @@
         <a class="nav-link" href="/account/pending">Pending Deposits</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/forum/create">Broadcast Notices</a>
+        <a class="nav-link" href="/notices/create">Broadcast Notices</a>
       </li>
     </ul>
   @endif

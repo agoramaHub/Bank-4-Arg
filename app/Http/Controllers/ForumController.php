@@ -21,10 +21,9 @@ class ForumController extends Controller
      */
     public function index()
     {
-        $notices = Forum::where('user_id', '=', 1)->get();
-        $forums  = Forum::where('user_id', '<>', 1)->get();
+        $notices = Forum::latest()->where('user_id', '=', 1)->get();
 
-        return view('forum.index', compact('notices', 'forums'));
+        return view('forum.index', compact('notices'));
 
     }
 
@@ -54,7 +53,7 @@ class ForumController extends Controller
                        'user_id' => auth()->id()
         ]);
 
-        return redirect('/forum');
+        return redirect('/notices');
 
 
     }
