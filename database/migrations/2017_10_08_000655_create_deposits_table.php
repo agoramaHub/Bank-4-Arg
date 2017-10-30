@@ -20,6 +20,7 @@ class CreateDepositsTable extends Migration
           $table->text('argument');
           $table->integer('value')->nullable();
           $table->integer('user_id');
+          $table->string('creator_id');
           $table->timestamps();
         });
     }

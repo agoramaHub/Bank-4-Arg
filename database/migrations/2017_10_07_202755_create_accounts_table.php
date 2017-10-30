@@ -20,6 +20,7 @@ class CreateAccountsTable extends Migration
             $table->text('argument');
             $table->integer('value');
             $table->integer('user_id');
+            $table->string('creator_id');
             $table->timestamps();
         });
     }

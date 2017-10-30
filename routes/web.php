@@ -71,3 +71,5 @@ Route::get('/account/pending/', 'DepositsController@pending');
 Route::get('/account/pending/{id}', 'DepositsController@show');
 
 Route::delete('/account/pending/{id}', 'DepositsController@value');
+
+Route::get('/account/personal', 'AccountsController@personal');

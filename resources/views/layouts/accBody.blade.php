@@ -41,7 +41,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><b>Key Points: </b>{{ $account->key_points }}</td>
+        <td><b>Key Points: </b>{!! $account->key_points !!}</td>
       </tr>
       <tr>
         <td></td>

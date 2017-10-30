@@ -22,7 +22,7 @@
         <td></td>
       </tr>
       <tr>
-        <td>{{ $pending->key_points }}</td>
+        <td>{!! $pending->key_points !!}</td>
       </tr>
       <tr>
         <td></td>

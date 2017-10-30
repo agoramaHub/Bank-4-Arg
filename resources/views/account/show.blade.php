@@ -20,13 +20,13 @@
         <td><b>Key Points: </b></td>
       </tr>
       <tr>
-        <td> {{ $arg->key_points }} </td>
+        <td> {!! $arg->key_points !!} </td>
       </tr>
       <tr>
         <td><b>Argument: </b></td>
       </tr>
       <tr>
-        <td> {{ $arg->argument }}</td>
+        <td> {!! $arg->argument !!}</td>
       </tr>
       <tr>
         <td><b>Trade Value:</b> Φ{{ $arg->value }}</td>

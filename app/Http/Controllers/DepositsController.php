@@ -26,7 +26,8 @@ class DepositsController extends Controller
             Deposits::create(['subject'    => request('subject'),
                               'key_points' => request('key_points'),
                               'argument'   => request('argument'),
-                              'user_id'    => auth()->id()
+                              'user_id'    => auth()->id(),
+                              'creator_id' => auth()->user()->username
             ]);
 
             return back();
@@ -40,7 +41,7 @@ class DepositsController extends Controller
       //view pending deposits index
           public function pending() {
 
-              $pendings = Deposits::where('value', '=', NULL)->get();
+              $pendings = Deposits::latest()->where('value', '=', NULL)->get();
 
               return view('admin.pending', compact('pendings'));
           }
@@ -60,16 +61,21 @@ class DepositsController extends Controller
 
             $deposit = Deposits::find($id);
 
-            Accounts::create(['subject'    => $deposit->subject,
-                              'key_points' => $deposit->key_points,
-                              'argument'   => $deposit->argument,
-                              'user_id'    => $deposit->user_id,
-                              'value'      => request('value')
-            ]);
-
             Wallet::create(['tot_wc'  => request('value'),
                             'user_id' => $deposit->user_id
             ]);
+
+            $coins = request('value');
+
+            for ($i=0; $i < $coins; $i++) {
+              Accounts::create(['subject'    => $deposit->subject,
+                                'key_points' => $deposit->key_points,
+                                'argument'   => $deposit->argument,
+                                'user_id'    => $deposit->user_id,
+                                'creator_id' => $deposit->creator_id,
+                                'value'      => request('value')
+              ]);
+            }
 
             $deposit->delete();
 

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
     integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link href="{{ URL::asset('css/dashboard.css') }}" rel="stylesheet">
+    <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
   </head>
 
   <body>
@@ -31,6 +32,7 @@
           @yield ('index')
           @yield ('thread')
           @yield ('singleArg')
+          @yield ('personal')
 
 
         <!--/main-->

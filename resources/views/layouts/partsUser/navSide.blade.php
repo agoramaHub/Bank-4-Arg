@@ -2,7 +2,11 @@
 
   <ul class="nav nav-pills flex-column">
     <li class="nav-item">
-      <a class="nav-link active" href="/account">Account Overview <span class="sr-only">(current)</span></a>
+      @if (Auth::user()->admin)
+        <a class="nav-link active" href="/account">All Accounts Overview <span class="sr-only">(current)</span></a>
+      @else
+        <a class="nav-link active" href="/account">Account Overview <span class="sr-only">(current)</span></a>
+      @endif
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/account/deposit">Deposit Argument</a>
@@ -14,6 +18,9 @@
 
   @if (Auth::user()->admin)
     <ul class="nav nav-pills flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="/account/personal">Personal Holdings</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="/account/pending">Pending Deposits</a>
       </li>

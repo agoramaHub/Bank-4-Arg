@@ -14,7 +14,6 @@ class AccountsController extends Controller
 {
 
 
-
     public function __construct() {
 
         $user = $this->middleware('auth');
@@ -30,16 +29,13 @@ class AccountsController extends Controller
 // Admin area display //
         $allAccounts = Accounts::all();
 
-        $usernames = User::all();
-
         $usersAcc = \DB::table('wallets')
                          ->leftJoin('users','users.id','=','user_id')
                          ->select(\DB::raw('count(user_id) as cnt, sum(tot_wc) as tot_wc, any_value(username) as username'))
-                         ->where('user_id','<>',1)
                          ->groupBy('user_id')
                          ->get();
 
-        return view('account.account', compact('accounts','wallet', 'allAccounts','usernames','usersAcc'));
+        return view('account.account', compact('accounts','wallet', 'allAccounts','usersAcc'));
     }
 
 // show single argument from users dashboard //
@@ -55,6 +51,17 @@ class AccountsController extends Controller
     public function create() {
 
         return view('account.create');
+    }
+
+//Load Admin Personal Acc View
+
+    public function personal() {
+
+        $accounts = Accounts::latest()->where('user_id','=', ['id' => auth()->id()])->get();
+
+        $wallet  = Wallet::where('user_id','=', ['id' => auth()->id()])->get();
+
+        return view('admin.personal', compact('accounts','wallet'));
     }
 
 

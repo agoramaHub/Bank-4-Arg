@@ -21,7 +21,7 @@
         <td></td>
       </tr>
       <tr>
-        <td>{{ $deposit->argument }}</td>
+        <td>{!! $deposit->argument !!}</td>
       </tr>
       <tr>
         <td><form method="POST" action="/account/pending/{{ $deposit->id }}"class="form-inline">
