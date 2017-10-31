@@ -6,7 +6,7 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Argument identification number: {{ $arg->id }}</th>
+        <th>Argument identification number: {{ $arg->id }} | Created by: {{ $arg->creator_id }}</th>
       </tr>
     </thead>
     <tbody>
@@ -14,7 +14,7 @@
         <td><b>Subject: {{ $arg->subject }}</b></td>
       </tr>
       <tr>
-        <td></td>
+        <td><b>Owned by:</b> {{ $arg->user->username }}</td>
       </tr>
       <tr>
         <td><b>Key Points: </b></td>

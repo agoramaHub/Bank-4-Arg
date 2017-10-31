@@ -47,17 +47,33 @@ Route::get('/account/deposit', 'AccountsController@create');
 Route::post('/account/deposit', 'DepositsController@store');
 
 /*
-* Forum Area
+* Notices Area
 */
 Route::get('/notices', 'ForumController@index');
 
+// Admin methods -->
 Route::get('/notices/create', 'ForumController@create');
 
 Route::post('/notices', 'ForumController@store');
+// End of Admin methods <--
 
 Route::get('/notices/{notice}', 'ForumController@show');
 
 Route::post('/notices/{forum}/comments', 'CommentsController@store');
+
+/*
+* Trading Post Area
+*/
+Route::get('/trade_post/1', 'TradesController@landscape1');
+
+Route::get('/trade_post/2', 'TradesController@landscape2');
+
+Route::get('/trade_post/arg/{id}', 'TradesController@show');
+
+Route::post('/trade_post', 'TradesController@trade');
+
+
+
 
 /*
 * Admin routes

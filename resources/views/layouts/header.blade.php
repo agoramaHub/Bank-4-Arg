@@ -3,7 +3,7 @@
 <section class="row text-center placeholders">
   <div class="col-6 col-sm-3 placeholder">
     <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-    <h4>Global Trading</h4>
+    <h4>Global Trading Coins</h4>
     <div class="text-muted">{{ $allAccounts->sum('value') }}</div>
   </div>
   <div class="col-6 col-sm-3 placeholder">
@@ -18,8 +18,8 @@
   </div>
   <div class="col-6 col-sm-3 placeholder">
     <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-    <h4>Label</h4>
-    <span class="text-muted">Something else</span>
+    <h4>Global Exchanges</h4>
+    <span class="text-muted">{{ $allAccounts->sum('exchanges') }}</span>
   </div>
 </section>
 
@@ -28,7 +28,7 @@
 <section class="row text-center placeholders">
   <div class="col-6 col-sm-3 placeholder">
     <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-    <h4>No. of Trades</h4>
+    <h4>No. of Trade Coins</h4>
     <div class="text-muted">{{ $accounts->sum('value') }}</div>
   </div>
   <div class="col-6 col-sm-3 placeholder">
@@ -43,8 +43,8 @@
   </div>
   <div class="col-6 col-sm-3 placeholder">
     <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-    <h4>Label</h4>
-    <span class="text-muted">Something else</span>
+    <h4>Total Exchanges</h4>
+    <span class="text-muted">{{ $accounts->sum('exchanges') }}</span>
   </div>
 </section>
 @endif

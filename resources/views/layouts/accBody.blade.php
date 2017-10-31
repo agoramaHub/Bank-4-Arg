@@ -47,7 +47,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><b>Trade Value: </b>Φ{{ $account->value }}</td>
+        <td><b>Trade Value: </b>Φ{{ $account->value }} | <b>No. of Exchanges:</b> {{ $account->exchanges }}</td>
       </tr>
     </tbody>
   </table>

@@ -14,10 +14,10 @@ class AccountsController extends Controller
 {
 
 
-    public function __construct() {
+        public function __construct() {
 
-        $user = $this->middleware('auth');
-    }
+            $user = $this->middleware('auth');
+        }
 
 //Display user's account information
     public function index() {
@@ -39,12 +39,12 @@ class AccountsController extends Controller
     }
 
 // show single argument from users dashboard //
-    public function show($id) {
+        public function show($id) {
 
-        $arg = Accounts::find($id);
+            $arg = Accounts::find($id);
 
-        return view('account.show', compact('arg'));
-    }
+            return view('account.show', compact('arg'));
+        }
 
 
 //Load deposit form view

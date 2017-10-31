@@ -33,6 +33,9 @@
           @yield ('thread')
           @yield ('singleArg')
           @yield ('personal')
+          @yield ('landscape1')
+          @yield ('landscape2')
+          @yield ('singleTrade')
 
 
         <!--/main-->

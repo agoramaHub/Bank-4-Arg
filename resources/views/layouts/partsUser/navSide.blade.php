@@ -9,6 +9,12 @@
       @endif
     </li>
     <li class="nav-item">
+      <a class="nav-link" href="/trade_post/1">Argument Landscape 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/trade_post/2">Argument Landscape 2</a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link" href="/account/deposit">Deposit Argument</a>
     </li>
     <li class="nav-item">
