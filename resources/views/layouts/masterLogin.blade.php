@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noindex, nofollow">
 
-        <title>WORDCOINs Bank of Arguments</title>
+        <title>Bank-4-arg</title>
 
         <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
 		    <link rel="stylesheet" href="{{ URL::asset('css/form-elements.css') }}">
@@ -39,7 +39,7 @@
 
                   <div class="row">
                       <div class="col-sm-8 col-sm-offset-2 text">
-                          <h1><strong>WORDCOIN's Bank of Arguments</strong></h1>
+                          <h1><strong>Bank-4-arg</strong></h1>
                           <div class="description">
                             <p>
                               This is a free responsive <strong>"login and register forms"</strong> template made with Bootstrap.

@@ -9,7 +9,7 @@
                   <div class="form-box">
                     <div class="form-top">
                       <div class="form-top-left">
-                        <h3>Login into WORDCOIN Account</h3>
+                        <h3>Login into Account</h3>
                           <p>Enter username and password to log on:</p>
                       </div>
                       <div class="form-top-right">
@@ -50,7 +50,7 @@
                   <div class="form-box">
                     <div class="form-top">
                       <div class="form-top-left">
-                        <h3>Sign up for a new WORDCOIN Account</h3>
+                        <h3>Sign up for a new Account</h3>
                           <p>Fill in the form below to get instant access:</p>
                       </div>
                       <div class="form-top-right">
